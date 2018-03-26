@@ -10,10 +10,11 @@ Abstract
 --------
 
 The central purpose of Concepts is to simplify generic programming such that it is approachable to the
-non-expert developer.  In general it makes great strides towards this end particularly in the capacity
+typical developer, who we believe should not be expected to be domain experts in the intricacies of C++'s
+template system.  In general it makes great strides towards this end particularly in the capacity
 of invoking a generic function; however, the Concepts design does not deliver on this promise in the
 implementation of a generic function.  This is because the feature does not constrain the overload set
-of a template-concept function itself.  This is contrary to the expectations of non-experts, because
+of a template-concept function itself.  This is contrary to the expectations of typical programmers, because
 to them Concepts should strongly resemble the callable properties of an interface.  This mental model
 drives their expectations to believe that Concepts offer a mechanism to limit the set of operations
 which would be visible from within their constrained function to those which are specified by concept
@@ -95,7 +96,7 @@ function!
 The only way for an author of such a constrained function to avoid this, at present, is to rewrite
 `formatLogarithmicValue` in such a way as to prevent the incorrect lookup.  Unfortunately, this requires
 a level of C++  expertise regarding name lookup and overload resolution which is at odds with the level
-of expertise expected of the audience of Concepts, viz. the non-expert programmer.  Such a rewrite
+of expertise expected of the audience of Concepts, viz. the typical programmer.  Such a rewrite
 might appear thus:
 
 ```
